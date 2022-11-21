@@ -1,0 +1,30 @@
+<body>
+    <h2 id="status">Please Wait...</h2>       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <div id="inner-overlay"></div>   -->
+    <canvas id="inner-overlay"></canvas>
+    <!-- <video id="inner-overlay"></video> -->
+    <video id="video" autoplay  #video ></video><br>
+    <video class="video" id='preview'  controls #recordedVideo></video><br>   
+  
+    <!-- <canvas id='canvas'></canvas> -->
+    <!-- <video id="video" autoplay width="700" #video ></video><br> -->
+
+    <span class="m-1"></span>
+    <!-- <video class="video" id='preview' style="width:700  !important;" controls #recordedVideo></video><br> -->
+    <br>
+    <div class="material-icons">
+    <!-- <button mat-raised-button color="red" *ngIf="!isRecording" (click)="startRecording()"></button> -->
+    <mat-icon class="retake" id="retake" color=#00FF00; (click)="retakeButton()">replay</mat-icon>
+    
+    <!-- <button mat-raised-button color="red" class="retake" (click)="retakeButton()">Retake</button>&nbsp;&nbsp; -->
+    <mat-icon  *ngIf="!isRecording" color="green" (click)="startRecording()">camera</mat-icon>
+    <!-- <button mat-raised-button color="red" *ngIf="isRecording" (click)="stopRecording()">Stop Recording</button>&nbsp;&nbsp; -->
+    <mat-icon id="stopicon" *ngIf="isRecording" color="red" (click)="stopRecording()">camera_alt</mat-icon>&nbsp;&nbsp;
+
+    <!-- <button mat-raised-button color="red" id="downloadButton" (click)="download()">Download</button>&nbsp;&nbsp; -->
+    <mat-icon id="downloadButton" color="blue" (click)="download()">send</mat-icon>&nbsp;&nbsp;
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </div>
+
+</body>
